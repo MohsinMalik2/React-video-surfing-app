@@ -20,10 +20,11 @@ export default class SearchBar extends Component {
                 {/* COntrolled field i.e. value of field controlled by state */}
 
                 <input type="text" className="form-control me-2"
+                    placeholder='Search Here....'
                     value={this.state.term} 
                     onChange={(e) =>  this.setState({term: e.target.value}) }
                 />
-                <button onClick={e => this.onInputChange(this.state.term)} className="btn btn-success" type="submit">Search</button>
+                <button onClick={e => this.onInputChange(this.state.term)} className="btn btn-danger" type="submit">Search</button>
           </div>
       );
     };

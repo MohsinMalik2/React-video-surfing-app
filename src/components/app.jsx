@@ -6,7 +6,7 @@ import NavBar from './nav_bar';
 import FootBar from './foot_bar';
 import VideoDetail from './video_detail';
 
-const API_KEY = "AIzaSyDiyV7tAq67DmWNgPWErf0ErMgtZooSHiE" ;
+const API_KEY = "AIzaSyAziaEE_Z45xfYoCZ-PH8IPBXh8mHUmrKE" ;
 
 
 export default class App extends Component {
@@ -40,7 +40,13 @@ export default class App extends Component {
           <NavBar/>
 
           <div className='mt-5 mb-5' >
-            <SearchBar  onSearch = {term => {this.searchTerm(term)}}/>
+            <div className="row">
+              <div className="col-md-3"></div>
+              <div className="col-md-6">
+                  <SearchBar  onSearch = {term => {this.searchTerm(term)}}/>
+              </div>
+              <div className="col-md-3"></div>
+            </div>
             <VideoDetail video={this.state.selectedVideo}/>
             <VideoList 
               onVideoSelect = {(selectedVideo) => this.setState({selectedVideo})
